@@ -38,6 +38,7 @@
       margin: -2px;
       border-radius: 10px 0 0 10px;
       display: flex;
+      white-space: nowrap;
       align-items: center; }
     .section.seminars-filter #seminars_filter_form .filter-block .filter-item input {
       border: 0 !important;
@@ -46,12 +47,10 @@
       padding: 0; }
   .section.seminars-filter #seminars_filter_form .filter-step-2 ul {
     display: flex;
-    flex-wrap: wrap;
     padding: 0;
     margin: 0; }
     .section.seminars-filter #seminars_filter_form .filter-step-2 ul li {
       flex-basis: auto;
-      flex: 1;
       display: flex;
       align-items: center;
       padding: 0.45455rem 0.85227rem;
