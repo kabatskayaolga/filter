@@ -38,8 +38,10 @@
       margin: -2px;
       border-radius: 10px 0 0 10px;
       display: flex;
-      white-space: nowrap;
       align-items: center; }
+      @media (min-width: 1200px) {
+        .section.seminars-filter #seminars_filter_form .filter-block .filter-heading {
+          white-space: nowrap; } }
     .section.seminars-filter #seminars_filter_form .filter-block .filter-item input {
       border: 0 !important;
       outline: none;
@@ -49,18 +51,25 @@
     display: flex;
     padding: 0;
     margin: 0; }
+    @media (max-width: 1200px) {
+      .section.seminars-filter #seminars_filter_form .filter-step-2 ul {
+        flex-wrap: wrap; } }
     .section.seminars-filter #seminars_filter_form .filter-step-2 ul li {
       flex-basis: auto;
       display: flex;
       align-items: center;
-      padding: 0.45455rem 0.85227rem;
+      padding: 0.3rem 0.85227rem;
       border-radius: 0;
       border: 1px solid white; }
+      @media (max-width: 1200px) {
+        .section.seminars-filter #seminars_filter_form .filter-step-2 ul li {
+          flex: 1; } }
       .section.seminars-filter #seminars_filter_form .filter-step-2 ul li.active {
         background-color: #32cde1; }
       .section.seminars-filter #seminars_filter_form .filter-step-2 ul li a {
         border: 0;
         margin: 0;
+        line-height: 1.3;
         color: white; }
 
 /*# sourceMappingURL=style.css.map */
