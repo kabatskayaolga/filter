@@ -43,7 +43,10 @@
         .section.seminars-filter #seminars_filter_form .filter-block .filter-heading {
           white-space: nowrap; } }
     .section.seminars-filter #seminars_filter_form .filter-block .filter-item {
-      color: #32cde1; }
+      color: #32cde1;
+      border-right: 2px solid white; }
+      .section.seminars-filter #seminars_filter_form .filter-block .filter-item:last-child {
+        border: none; }
       .section.seminars-filter #seminars_filter_form .filter-block .filter-item input {
         border: 0 !important;
         outline: none;
@@ -73,6 +76,8 @@
           flex: 1; } }
       .section.seminars-filter #seminars_filter_form .filter-step-2 ul li.active {
         background-color: #32cde1; }
+        .section.seminars-filter #seminars_filter_form .filter-step-2 ul li.active a {
+          text-decoration: none; }
       .section.seminars-filter #seminars_filter_form .filter-step-2 ul li a {
         border: 0;
         margin: 0;
