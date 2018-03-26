@@ -42,12 +42,14 @@
       @media (min-width: 1200px) {
         .section.seminars-filter #seminars_filter_form .filter-block .filter-heading {
           white-space: nowrap; } }
-    .section.seminars-filter #seminars_filter_form .filter-block .filter-item input {
-      border: 0 !important;
-      outline: none;
-      box-shadow: none;
-      padding: 0;
-      width: 70px; }
+    .section.seminars-filter #seminars_filter_form .filter-block .filter-item {
+      color: #32cde1; }
+      .section.seminars-filter #seminars_filter_form .filter-block .filter-item input {
+        border: 0 !important;
+        outline: none;
+        box-shadow: none;
+        padding: 0;
+        width: 70px; }
     .section.seminars-filter #seminars_filter_form .filter-block .filter-selected-branch {
       margin-bottom: 0; }
       .section.seminars-filter #seminars_filter_form .filter-block .filter-selected-branch .breadcrumbs {
