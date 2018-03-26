@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css?ver=0.010">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="section inv seminars-filter">
+		
+		<div class="row">
+			
+			<div class="large-6 column large-push-6 medium-12 column">
+				<p class="h1 seminars-filter_name">Расписание семинаров и тренингов</p>
+				
+				<form id="seminars_filter_form" action="" method="get">
+					<p class="h1 branch_name">Архивное дело</p>
+					<input type="hidden" name="br" value="45">
+					<input type="hidden" name="doc" value="">
+					<input type="hidden" name="type" value="">
+					<div class="filter-dates filter-block">
+						<div class="filter-heading"><span>Выберите дату:</span></div>
+						<span class="filter-item">c <input type="text" name="from" placeholder="дд.мм.гггг" value=""></span>
+						<span class="filter-item">по <input type="text" name="to" placeholder="дд.мм.гггг" value=""></span>
+					</div>
+					<div class="filter-block">
+						<div class="filter-heading"><span>Выберите направление:</span></div>
+						<div class="column filter-step-1 active">
+							<ul class="branch-menu">
+								<li class="branch-77" data-branch_id="77"><i class="ico ico-delo"></i>&nbsp;<a href="/seminari-i-treningi/obuchenie-deloproizvodstvu/">Делопроизводство и документооборот</a></li>
+								<li class="branch-11" data-branch_id="11"><i class="ico ico-secretary"></i>&nbsp;<a href="/seminari-i-treningi/kursy-secretarya/">Секретариат и офис-менеджмент</a></li>
+								<li class="branch-45" data-branch_id="45"><i class="ico ico-archive"></i>&nbsp;<a href="/seminari-i-treningi/arhivnoe-delo/">Архивное дело</a></li>
+								<li class="branch-1" data-branch_id="1"><i class="ico ico-manage2"></i>&nbsp;<a href="/seminari-i-treningi/kursy-upravleniya-personalom/">Управление и развитие персонала</a></li>
+								<li class="branch-51" data-branch_id="51"><i class="ico ico-qa"></i>&nbsp;<a href="/seminari-i-treningi/professionalnye-standarty/">Профессиональные стандарты</a></li>
+								<li class="branch-67" data-branch_id="67"><i class="ico ico-qual"></i>&nbsp;<a href="/seminari-i-treningi/servis-obsluzhivanie-klientov/">Качественный сервис. Обслуживание клиентов</a></li>
+								<li class="branch-37" data-branch_id="37"><i class="ico ico-pie"></i>&nbsp;<a href="/seminari-i-treningi/treningi-po-prodazham/">Продажи и переговоры</a></li>
+								<li class="branch-76" data-branch_id="76"><i class="ico ico-phone"></i>&nbsp;<a href="/seminari-i-treningi/telefonnoe-obscheniye/">Телефонное общение</a></li>
+								<li class="branch-12" data-branch_id="12"><i class="ico ico-chart"></i>&nbsp;<a href="/seminari-i-treningi/kursy-marketinga/">Маркетинг и копирайтинг</a></li>
+								<li class="branch-10" data-branch_id="10"><i class="ico ico-busy"></i>&nbsp;<a href="/seminari-i-treningi/obuchenie-korporativnoy-kulture/">Бизнес-этикет. Корпоративная культура</a></li>
+								<li class="branch-13" data-branch_id="13"><i class="ico ico-idea"></i>&nbsp;<a href="/seminari-i-treningi/kursy-menedzhmenta/">Менеджмент и личная эффективность</a></li>
+								<li class="branch-75" data-branch_id="75"><i class="ico ico-sec"></i>&nbsp;<a href="/seminari-i-treningi/bezopasnost-biznesa/">Безопасность бизнеса</a></li>
+								<li class="branch-84" data-branch_id="84"><i class="ico ico-case"></i>&nbsp;<a href="/seminari-i-treningi/obuchenie-zakupkam/">Семинары для госслужащих</a></li>
+								<li class="branch-71" data-branch_id="71"><i class="ico ico-fire"></i>&nbsp;<a href="/seminari-i-treningi/chrezvychaynye-situatsii/">Предупреждение и ликвидация ЧС</a></li>
+								<li class="branch-89" data-branch_id="89"><i class="ico ico-finance"></i>&nbsp;<a href="/seminari-i-treningi/obuchenie-upravleniyu-organizatciey/">Управление организацией</a></li>
+								<li class="branch-74" data-branch_id="74"><i class="ico ico-manage1"></i>&nbsp;<a href="/seminari-i-treningi/online_obuchenie/">Онлайн-обучение</a></li>
+							</ul>
+					
+					
+							<div class="filter-selected-branch">
+								<div class="breadcrumbs">
+									<div class="breadcrumbs-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+										<a href="/seminari-i-treningi/" itemprop="url"><span>Все направления</span></a>
+										<meta itemprop="title" content="Семинары и тренинги">
+									</div>
+									<div class="breadcrumbs-item breadcrumbs-selected" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/seminari-i-treningi/arhivnoe-delo/">Архивное дело</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="filter-step-2">
+						<div class="filter-block">
+						<!-- <div class="large-5 column"> -->
+							<div class="filter-heading"><span>Выдаваемый документ:</span></div>
+							<ul>
+								<li class="active"><a data-param="doc" data-val="1" href="#1">Сертификат</a></li>
+								<li><a data-param="doc" data-val="2" href="#2">Удостоверение о повышении квалификации</a></li>
+								<li><a data-param="doc" data-val="3" href="#3">Диплом о профессиональной переподготовке</a></li>
+							</ul>
+						<!-- </div> -->
+						</div>
+						<div class="filter-block">
+						<!-- <div class="large-6 column large-push-6"> -->
+							<div class="filter-heading">Тип программы:</div>
+							<ul>
+													<li><a data-param="type" data-val="1" href="#1">Семинар</a></li>
+													<li><a data-param="type" data-val="2" href="#2">Тренинг</a></li>
+													<li><a data-param="type" data-val="3" href="#3">Курс повышения квалификации</a></li>
+													<li><a data-param="type" data-val="4" href="#4">Дистанционное обучение</a></li>
+													<li class="active"><a data-param="type" data-val="5" href="#5">Профессиональная переподготовка</a></li>
+													<li><a data-param="type" data-val="6" href="#6">Вебинар</a></li>
+											</ul>
+						<!-- </div> -->
+						</div>
+					</div>
+				</form>
+	
+				<script charset="UTF-8" async="" src="https://cloud.roistat.com/dist/module.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="//code.jivosite.com/script/widget/Uo7LytMKoB"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script>
+					window.defer = window.defer || [];
+					window.defer.push(function($) {
+						var form = $('#seminars_filter_form');
+				
+						$('.filter-step-1 .branch-menu a').on('click', function(e) {
+							e.preventDefault();
+							var li = $(this).closest('li'),
+								br = li.data('branch_id');
+							form.find('input[name=br]').val(br);
+							$('.filter-selected-branch .breadcrumbs-selected').html(li.find('a').clone());
+							$('.filter-step-1').addClass('active');
+							$('.branch_name').removeClass('hide').text($('.breadcrumbs-selected a').text());
+							form.submit();
+						});
+				
+						$('.breadcrumbs .breadcrumbs-item a').on('click', function(e) {
+							e.preventDefault();
+							$('.branch_name').addClass('hide');
+						});
+				
+						form.on('click', '.filter-selected-branch a', function(e) {
+							e.preventDefault();
+							form.find('input[name=br]').val('');
+							$('.filter-step-1').removeClass('active');
+							$('.branch_name').addClass('hide');
+						});
+				
+						$('.filter-step-2 a').on('click', function(e) {
+							e.preventDefault();
+							var t = $(this),
+								li = t.closest('li'),
+								input = form.find('input[name=' + t.data('param') + ']');
+							input.val(li.is('.active') ? '' : t.data('val'));
+							li.siblings('li').removeClass('active');
+							li.toggleClass('active');
+							form.submit();
+						});
+				
+						form.find('input[name=from], input[name=to]').on('change', function() {
+							form.submit();
+						});
+				
+						form.on('submit', function(e) {
+							e.preventDefault();
+							var filterResults = $('.section.filter-results');
+							filterResults.block();
+							$.post(form.attr('action'), form.serialize(), function(content) {
+								filterResults.html(content);
+								filterResults.find('.slick-auto').slick();
+								filterResults.unblock();
+							});
+						});
+				
+						// datepickers
+				
+						var fromInput = form.find('input[name=from]'),
+							toInput = form.find('input[name=to]'),
+							datePickers = new sem.DatePickers(fromInput, toInput);
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

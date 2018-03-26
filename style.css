@@ -1,0 +1,67 @@
+@import 'https://seminarna.ru/assets/css/main.css?v=20170828';
+.section.seminars-filter {
+  background: url(https://seminarna.ru/assets/img/banner-right.jpg) right top no-repeat, linear-gradient(to left, #01414a, #01414a, rgba(1, 65, 74, 0)), url(back.jpg) left top/contain no-repeat;
+  text-align: initial;
+  padding: 1.5rem 0 1.5rem; }
+  @media (max-width: 1750px) {
+    .section.seminars-filter {
+      background: url(https://seminarna.ru/assets/img/banner-right.jpg) 120% top no-repeat, linear-gradient(to left, #01414a, #01414a, rgba(1, 65, 74, 0)), url(back.jpg) left top/contain no-repeat; } }
+  @media (max-width: 1530px) {
+    .section.seminars-filter {
+      background: url(https://seminarna.ru/assets/img/banner-right.jpg) 150% top no-repeat, linear-gradient(to left, #01414a, #01414a, rgba(1, 65, 74, 0)), url(back.jpg) left top/contain no-repeat; } }
+  @media (max-width: 1359px) {
+    .section.seminars-filter {
+      background: url(https://seminarna.ru/assets/img/banner-right.jpg) 200% top no-repeat, linear-gradient(to left, #01414a, #01414a, rgba(1, 65, 74, 0)), url(back.jpg) left top/contain no-repeat; } }
+  @media (max-width: 1200px) {
+    .section.seminars-filter {
+      background: url(https://seminarna.ru/assets/img/banner-right.jpg) 500% top no-repeat, linear-gradient(to left, #01414a, #01414a, rgba(1, 65, 74, 0)), url(back.jpg) left top/contain no-repeat; } }
+  @media (max-width: 1027px) {
+    .section.seminars-filter {
+      background: url(https://seminarna.ru/assets/img/banner-right.jpg) right top/cover no-repeat, linear-gradient(to left, #01414a, #01414a, rgba(1, 65, 74, 0)), url(back.jpg) left top/contain no-repeat; } }
+  .section.seminars-filter .breadcrumbs, .section.seminars-filter .h1 {
+    text-align: initial; }
+  .section.seminars-filter .seminars-filter_name {
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-bottom: 0; }
+  .section.seminars-filter .branch_name {
+    font-size: 30px; }
+  .section.seminars-filter #seminars_filter_form .filter-block {
+    margin: 1rem 0;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex; }
+    .section.seminars-filter #seminars_filter_form .filter-block .filter-heading {
+      background-color: white;
+      padding: 0.54546rem;
+      color: #01414a;
+      margin: -2px;
+      border-radius: 10px 0 0 10px;
+      display: flex;
+      align-items: center; }
+    .section.seminars-filter #seminars_filter_form .filter-block .filter-item input {
+      border: 0 !important;
+      outline: none;
+      box-shadow: none;
+      padding: 0; }
+  .section.seminars-filter #seminars_filter_form .filter-step-2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0; }
+    .section.seminars-filter #seminars_filter_form .filter-step-2 ul li {
+      flex-basis: auto;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0.45455rem 0.85227rem;
+      border-radius: 0;
+      border: 1px solid white; }
+      .section.seminars-filter #seminars_filter_form .filter-step-2 ul li.active {
+        background-color: #32cde1; }
+      .section.seminars-filter #seminars_filter_form .filter-step-2 ul li a {
+        border: 0;
+        margin: 0;
+        color: white; }
+
+/*# sourceMappingURL=style.css.map */
