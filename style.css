@@ -27,10 +27,10 @@
   .section.seminars-filter .branch_name {
     font-size: 30px; }
   .section.seminars-filter #seminars_filter_form .filter-block {
-    margin: 1rem 0;
+    margin: 0.25rem 0;
     border: 2px solid white;
     border-radius: 10px;
-    display: flex; }
+    display: inline-flex; }
     .section.seminars-filter #seminars_filter_form .filter-block .filter-heading {
       background-color: white;
       padding: 0.54546rem;
@@ -46,7 +46,12 @@
       border: 0 !important;
       outline: none;
       box-shadow: none;
-      padding: 0; }
+      padding: 0;
+      width: 70px; }
+    .section.seminars-filter #seminars_filter_form .filter-block .filter-selected-branch {
+      margin-bottom: 0; }
+      .section.seminars-filter #seminars_filter_form .filter-block .filter-selected-branch .breadcrumbs {
+        margin: 0.45rem 0 0; }
   .section.seminars-filter #seminars_filter_form .filter-step-2 ul {
     display: flex;
     padding: 0;
