@@ -1,0 +1,118 @@
+{% import '_common/macro.twig' as macro %}
+
+<form id="seminars_filter_form" action="" method="get">
+    <p class="h1 branch_name hide"></p>
+    <input type="hidden" name="br" value="{{ filter.br }}">
+    <input type="hidden" name="doc" value="{{ filter.doc }}">
+    <input type="hidden" name="type" value="{{ filter.type }}">
+    <div>
+        <div class="filter-dates filter-block">
+            <div class="filter-heading">
+                <span>Выберите дату:</span>
+            </div>
+            <span class="filter-item">c <input type="text" name="from" placeholder="дд.мм.гггг"  value="{{ filter.from }}"></span>
+            <span class="filter-item">по <input type="text" name="to" placeholder="дд.мм.гггг" value="{{ filter.to }}"></span>
+        </div>
+    <div>
+        <div class="filter-block">
+            <div class="filter-heading">Выберите направление:</div>
+
+            <div class="column filter-step-1{% if filter.br %} active{% endif %}">
+                {{ macro.branchMenu(branches) }}
+
+                <div class="filter-selected-branch">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a href="/seminari-i-treningi/" itemprop="url"><span>Все направления</span></a>
+                            <meta itemprop="title" content="Семинары и тренинги">
+                        </div>
+                        <div class="breadcrumbs-item breadcrumbs-selected" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a href="{{ macro.branchUrl(selectedBranch.Alias) }}" itemprop="url"><span itemprop="title">{{ selectedBranch.MenuTitle }}</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-step-2">
+               
+                <div class="filter-heading">Выдаваемый документ:</div>
+                <ul>
+                    {% for doc in documentTypes %}
+                        <li{% if doc.id == filter.doc %} class="active"{% endif %}><a data-param="doc" data-val="{{ doc.id }}" href="#{{ doc.id }}">{{ doc.description|default(doc.name) }}</a></li>
+                    {% endfor %}
+                </ul>
+        
+                
+                <div class="filter-heading">Тип программы:</div>
+                <ul>
+                    {% for type in programTypes %}
+                        <li{% if type.id == filter.type %} class="active"{% endif %}><a data-param="type" data-val="{{ type.id }}" href="#{{ type.id }}">{{ type.name }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    window.defer = window.defer || [];
+    window.defer.push(function($) {
+        var form = $('#seminars_filter_form');
+
+        $('.filter-step-1 .branch-menu a').on('click', function(e) {
+            e.preventDefault();
+            var li = $(this).closest('li'),
+                br = li.data('branch_id');
+            form.find('input[name=br]').val(br);
+            $('.filter-selected-branch .breadcrumbs-selected').html(li.find('a').clone());
+            $('.filter-step-1').addClass('active');
+            $('.branch_name').removeClass('hide').text($('.breadcrumbs-selected a').text());
+            form.submit();
+        });
+
+        $('.breadcrumbs .breadcrumbs-item a').on('click', function(e) {
+            e.preventDefault();
+            $('.branch_name').addClass('hide');
+        });
+
+        form.on('click', '.filter-selected-branch a', function(e) {
+            e.preventDefault();
+            form.find('input[name=br]').val('');
+            $('.filter-step-1').removeClass('active');
+            $('.branch_name').addClass('hide');
+        });
+
+        $('.filter-step-2 a').on('click', function(e) {
+            e.preventDefault();
+            var t = $(this),
+                li = t.closest('li'),
+                input = form.find('input[name=' + t.data('param') + ']');
+            input.val(li.is('.active') ? '' : t.data('val'));
+            li.siblings('li').removeClass('active');
+            li.toggleClass('active');
+            form.submit();
+        });
+
+        form.find('input[name=from], input[name=to]').on('change', function() {
+            form.submit();
+        });
+
+        form.on('submit', function(e) {
+            e.preventDefault();
+            var filterResults = $('.section.filter-results');
+            filterResults.block();
+            $.post(form.attr('action'), form.serialize(), function(content) {
+                filterResults.html(content);
+                filterResults.find('.slick-auto').slick();
+                filterResults.unblock();
+            });
+        });
+
+        // datepickers
+
+        var fromInput = form.find('input[name=from]'),
+            toInput = form.find('input[name=to]'),
+            datePickers = new sem.DatePickers(fromInput, toInput);
+    });
+</script>
