@@ -66,6 +66,9 @@
       width: 50%;
       padding: 1px 0;
       float: initial; }
+      @media (max-width: 866px) {
+        .section.seminars-filter #seminars_filter_form .filter-block .branch-menu li {
+          width: 100%; } }
       .section.seminars-filter #seminars_filter_form .filter-block .branch-menu li a {
         color: white; }
   .section.seminars-filter #seminars_filter_form .filter-step-2 ul {
